@@ -8,6 +8,6 @@ export default defineConfig({
   build: {
     target: 'esnext', // <--- Add this line
   },
-  base: './',
+  base: '/',
 })
 
