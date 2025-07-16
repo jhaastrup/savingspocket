@@ -26,9 +26,10 @@ function App() {
   // ALATPay SDK configuration using the UseALATPay hook
   // IMPORTANT: Replace 'YOUR_ALATPAY_API_KEY' and 'YOUR_ALATPAY_BUSINESS_ID'
   // with your actual credentials for production.
-  // Using the keys you provided in your last message.
-  const ALATPAY_API_KEY = "6aa94307985046b9bf2f59c5e284bed8";
-  const ALATPAY_BUSINESS_ID = "4302a35f-8eef-46ab-fc5e-08ddb945d09a";
+  // Now fetching keys from .env file using Vite's import.meta.env
+  const ALATPAY_API_KEY = import.meta.env.VITE_ALATPAY_API_KEY;
+  const ALATPAY_BUSINESS_ID = import.meta.env.VITE_ALATPAY_BUSINESS_ID;
+
 
   // Define the ALATPay instance using the hook
   // The 'amount' parameter will now be dynamic, based on 'fundingAmount' state
